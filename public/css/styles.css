@@ -1,10 +1,108 @@
 body {
-  background-color: #e8ecef;
+  background-color: #f0f0f0;
 }
 
-.centered {
-  padding-top: 200px;
-  text-align: center;
+hr {
+  width: 95%;
+}
+
+.fa {
+  font-size: 3.3rem;
+}
+
+.social-icon {
+  padding: 0;
+}
+
+.heading {
+  font-family: 'Otomanopee One', sans-serif;
+}
+
+#home .intro {
+  padding-top: 6rem;
+}
+
+#home .login {
+  border: 1px solid #000;
+}
+
+#home .login input {
+  width: 80%;
+}
+
+#home h3 {
+  font-size: 2.4rem;
+}
+
+#home span {
+  font-size: 0.7rem;
+}
+
+#home img {
+  width: 50rem;
+}
+
+#home a {
+  text-decoration: none;
+}
+
+@media (max-width: 990px) {
+  #home h3 {
+    font-size: 4rem;
+    margin-top: 10rem;
+    /* margin-bottom: 5rem; */
+  }
+
+  #home span {
+    font-size: 1.5rem;
+  }
+
+  #home img {
+    /* display: none; */
+  }
+
+  #home .heading {
+    font-size: 5.5rem;
+  }
+
+  .fa {
+    font-size: 5.5rem;
+    padding-bottom: 1rem;
+  }
+
+  #home input{
+    height: 4rem;
+    margin-top: 1rem !important; 
+    margin-bottom: 1rem !important;
+  }
+
+  #home input,
+  input::-webkit-input-placeholder {
+      font-size: 1.6rem;
+      line-height: 3;
+  }
+
+  #home .btn{
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  #home .fab{
+    font-size: 1.6rem;
+    margin-top: 4%;
+  }
+
+  #home p{
+    font-size: 1.5rem;
+  }
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: #fff;
+  width: 100%;
 }
 
 .secret-text {
@@ -12,8 +110,4 @@ body {
   font-size: 2rem;
   color: #fff;
   background-color: #000;
-}
-
-.social-icon {
-  padding: 0;
 }
