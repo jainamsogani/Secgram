@@ -80,14 +80,15 @@ passport.use(
 );
 
 app.get('/', function (req, res) {
-  res.render('home');
+  if (req.user) {
+    res.redirect('/secrets');
+} else {
+    res.render("home");
+}
 });
 
-// app.get('/login', function (req, res) {
-//   res.render('login');
-// });
-
 app.get('/register', function (req, res) {
+  req.logout();
   res.render('register');
 });
 
@@ -106,15 +107,19 @@ app.get(
 );
 
 app.get('/secrets', function (req, res) {
-  User.find({ secrets: { $ne: null } }, function (err, foundUsers) {
-    if (err) {
-      console.log(err);
-    } else {
-      if (foundUsers) {
-        res.render('secrets', { usersWithSecrets: foundUsers });
+  if (req.user) {
+    User.find({ secrets: { $ne: null } }, function (err, foundUsers) {
+      if (err) {
+        console.log(err);
+      } else {
+        if (foundUsers) {
+          res.render('secrets', { usersWithSecrets: foundUsers });
+        }
       }
-    }
-  });
+    });
+} else {
+    res.redirect("/");
+}
 });
 
 app.get('/logout', function (req, res) {
@@ -123,7 +128,11 @@ app.get('/logout', function (req, res) {
 });
 
 app.get('/submit', function (req, res) {
-  res.render('submit');
+  if (req.user) {
+    res.render('submit');
+} else {
+  res.redirect("/");
+}
 });
 
 app.post('/register', function (req, res) {
@@ -166,6 +175,8 @@ app.post('/submit', function (req, res) {
         foundUser.save(function () {
           res.redirect('/secrets');
         });
+      } else {
+        res.redirect('/');
       }
     }
   });

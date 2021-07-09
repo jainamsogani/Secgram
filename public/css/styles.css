@@ -3,11 +3,7 @@ body {
 }
 
 hr {
-  width: 95%;
-}
-
-.fa {
-  font-size: 3.3rem;
+  width: 85%;
 }
 
 .social-icon {
@@ -18,6 +14,32 @@ hr {
   font-family: 'Otomanopee One', sans-serif;
 }
 
+.navbar .navbar-brand{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.navbar .navbar-nav a{
+  font-size: 1.3rem;
+  color: #fff !important;
+}
+
+.navbar-toggler-icon{
+  font-size: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+.google a{
+  color: red;
+}
+
 #home .intro {
   padding-top: 6rem;
 }
@@ -26,7 +48,15 @@ hr {
   border: 1px solid #000;
 }
 
+#home .fa {
+  font-size: 3.3rem;
+}
+
 #home .login input {
+  width: 80%;
+}
+
+#home .login .btn{
   width: 80%;
 }
 
@@ -42,59 +72,49 @@ hr {
   width: 50rem;
 }
 
-#home a {
-  text-decoration: none;
+#register .fa {
+  font-size: 3.3rem;
 }
 
-@media (max-width: 990px) {
-  #home h3 {
-    font-size: 4rem;
-    margin-top: 10rem;
-    /* margin-bottom: 5rem; */
-  }
+#register .register {
+  border: 1px solid #000;
+}
 
-  #home span {
-    font-size: 1.5rem;
-  }
+#register .register input {
+  width: 80%;
+}
 
-  #home img {
-    /* display: none; */
-  }
+#register h4{
+  font-family: 'Noto Sans', sans-serif;
+}
 
-  #home .heading {
-    font-size: 5.5rem;
-  }
+#register .btn{
+  width: 100%;
+}
 
-  .fa {
-    font-size: 5.5rem;
-    padding-bottom: 1rem;
-  }
+#submit .submit{
+  border-radius: 5%;
+  margin-top: 5rem;
+}
 
-  #home input{
-    height: 4rem;
-    margin-top: 1rem !important; 
-    margin-bottom: 1rem !important;
-  }
+#submit p{
+  font-family: 'Chelsea Market', cursive;
+}
 
-  #home input,
-  input::-webkit-input-placeholder {
-      font-size: 1.6rem;
-      line-height: 3;
-  }
+#submit .btn{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: red;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
-  #home .btn{
-    height: 4rem;
-    font-size: 1.6rem;
-  }
+#submit .btn:hover{
+  opacity: 0.8;
+}
 
-  #home .fab{
-    font-size: 1.6rem;
-    margin-top: 4%;
-  }
-
-  #home p{
-    font-size: 1.5rem;
-  }
+#submit img{
+  width: 2rem;
 }
 
 #footer{
@@ -106,8 +126,108 @@ hr {
 }
 
 .secret-text {
-  text-align: center;
   font-size: 2rem;
   color: #fff;
-  background-color: #000;
+}
+
+@media (max-width: 990px) {
+  .navbar .navbar-brand{
+    font-size: 5rem;
+  }
+
+  .navbar .navbar-nav a{
+    font-size: 3rem;
+  }
+
+  #home h3 {
+    font-size: 4rem;
+    margin-top: 10rem;
+  }
+
+  #home span {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 5.5rem;
+  }
+
+  #register .fa, #home .fa {
+    font-size: 5.5rem;
+    padding-bottom: 1rem;
+  }
+
+  #home input, #register input{
+    height: 4rem;
+    margin-top: 1rem !important; 
+    margin-bottom: 1rem !important;
+  }
+
+  #home input,
+  input::-webkit-input-placeholder {
+      font-size: 1.6rem;
+      line-height: 3;
+  }
+
+  #home .btn, #register .btn{
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  #home .fab{
+    font-size: 1.8rem;
+    margin-top: 4%;
+  }
+
+  #home a, #register a{
+    font-size: 1.8rem;
+  }
+
+  #home p{
+    font-size: 1.8rem;
+  }
+
+  #register{
+    padding-top: 18rem;
+  }
+
+  #register h4{
+    font-size: 3rem;
+  }
+
+  #register label{
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  #submit .submit{
+    margin-top: 14rem;
+    margin-bottom: 15%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 35%;
+  }
+
+  #submit .secret-text{
+    font-size: 4rem;
+  }
+
+  #submit textarea{
+    height: 12rem;
+  }
+
+  #submit textarea,
+  textarea::-webkit-textarea-placeholder {
+      font-size: 1.6rem;
+      line-height: 3;
+  }
+
+    #submit img{
+      width: 3rem;
+    }
+
+  #footer{
+    font-size: 2rem;
+  }
 }
