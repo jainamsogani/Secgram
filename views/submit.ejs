@@ -10,7 +10,8 @@
     <form action="/submit" method="POST">
 
       <div class="form-group">
-        <textarea type="text" class="form-control text-center" rows="5" name="secret" placeholder="What's your secret?" required></textarea>
+        <textarea type="text" class="secret form-control text-center" rows="5" name="secret" placeholder="What's your secret?" maxlength="300" required></textarea>
+        <span id='remainingC' style="color: aliceblue;"></span>
       </div>
       <div class="text-end">
       <button type="submit" class="btn"><img src="images/send.png" alt="Send"></button>
@@ -20,5 +21,14 @@
 
   </div>
 </div>
-</div>
+<script>
+  $('textarea').keypress(function(){
+
+if(this.value.length > 300){
+    return false;
+}
+
+$("#remainingC").html("Remaining characters : " + (300 - this.value.length));
+});
+</script>
 <%- include('partials/footer') %>

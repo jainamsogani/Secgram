@@ -117,6 +117,22 @@ a:hover{
   width: 2rem;
 }
 
+#secrets{
+  margin-bottom: 4rem;
+}
+
+#secrets .secret-text{
+  color: #000;
+}
+
+#secrets h3{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+#secrets hr{
+  width: 100%;
+}
+
 #footer{
   position: fixed;
   bottom: 0;
@@ -130,7 +146,7 @@ a:hover{
   color: #fff;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   .navbar .navbar-brand{
     font-size: 5rem;
   }
@@ -210,7 +226,7 @@ a:hover{
   }
 
   #submit .secret-text{
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   #submit textarea{
@@ -226,6 +242,24 @@ a:hover{
     #submit img{
       width: 3rem;
     }
+
+  #secrets h1{
+    font-size: 5rem;
+  }
+
+  #secrets .card-text{
+    font-size: 2rem;
+  }
+
+  #secrets h3{
+    font-size: 2rem;
+    margin-top: 2rem;
+    line-height: 4rem;
+  }
+
+  #secrets a{
+    font-size: 1.8rem;
+  }
 
   #footer{
     font-size: 2rem;
