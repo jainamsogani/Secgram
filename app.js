@@ -64,8 +64,8 @@ passport.deserializeUser(function (id, done) {
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
+      clientID: '714331275504-v5vod9runu8mqepkkfuhum7ai2s160m9.apps.googleusercontent.com',
+      clientSecret: '7cCjUEebGAQ3gRrhVlelGj3u',
       callbackURL: 'http://localhost:3000/auth/google/secrets',
       userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo',
     },
@@ -99,7 +99,7 @@ app.get(
 
 app.get(
   '/auth/google/secrets',
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { failureRedirect: '/' }),
   function (req, res) {
     // Successful authentication, redirect to secrets.
     res.redirect('/secrets');
