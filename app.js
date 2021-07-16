@@ -64,9 +64,9 @@ passport.deserializeUser(function (id, done) {
 passport.use(
   new GoogleStrategy(
     {
-      clientID: '714331275504-v5vod9runu8mqepkkfuhum7ai2s160m9.apps.googleusercontent.com',
-      clientSecret: '7cCjUEebGAQ3gRrhVlelGj3u',
-      callbackURL: 'http://localhost:3000/auth/google/secrets',
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: 'https://gentle-basin-70983.herokuapp.com/auth/google/secrets',
       userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo',
     },
     function (accessToken, refreshToken, profile, cb) {
