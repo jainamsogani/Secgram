@@ -31,7 +31,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://admin:jainamjs@cluster0.szqt4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DBURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -82,9 +82,9 @@ passport.use(
 app.get('/', function (req, res) {
   if (req.user) {
     res.redirect('/secrets');
-} else {
-    res.render("home");
-}
+  } else {
+    res.render('home');
+  }
 });
 
 app.get('/register', function (req, res) {
@@ -117,9 +117,9 @@ app.get('/secrets', function (req, res) {
         }
       }
     });
-} else {
-    res.redirect("/");
-}
+  } else {
+    res.redirect('/');
+  }
 });
 
 app.get('/logout', function (req, res) {
@@ -130,9 +130,9 @@ app.get('/logout', function (req, res) {
 app.get('/submit', function (req, res) {
   if (req.user) {
     res.render('submit');
-} else {
-  res.redirect("/");
-}
+  } else {
+    res.redirect('/');
+  }
 });
 
 app.post('/register', function (req, res) {
@@ -183,7 +183,7 @@ app.post('/submit', function (req, res) {
 });
 
 let port = process.env.PORT;
-if (port == null || port == "") {
+if (port == null || port == '') {
   port = 3000;
 }
 
