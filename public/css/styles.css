@@ -42,6 +42,7 @@ a:hover{
 
 #home .intro {
   padding-top: 6rem;
+  margin: 0;
 }
 
 #home .login {
