@@ -1,5 +1,5 @@
 # Secrets
-Live at [http://secgram.herokuapp.com/](http://secgram.herokuapp.com/).
+Live at [https://dark-rose-marlin-kilt.cyclic.app/](https://dark-rose-marlin-kilt.cyclic.app/).
 
 This web application lets you share your darkest and cringiest secrets anonymously with the world.
 
